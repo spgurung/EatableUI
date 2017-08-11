@@ -1,0 +1,71 @@
+
+<ion-view>
+  <ion-nav-title>
+    <span style="color:#A1D490">Eat</span>Able
+  </ion-nav-title>
+  <ion-content>
+    <div class="spacer padding-bottom"></div>
+
+    <label class="label-info4">Check and locate food products safe for you</label>
+
+    <div class="spacer padding-bottom"></div>
+
+    <div class="row row-top" style="background: #90D4D1">
+      <div class="col col-center col-80">
+        <div class="row">
+          <label style="color:#ffffff">Is Eatable?</label>
+        </div>
+        <div class="row">
+          <label style="color:#ffffff; font-size: 10px;font-style:italic ">Scan product's barcode to check if its safe for you</label>
+        </div>
+      </div>
+      <div class="col col-right">
+        <a class="button button-default button-scan icon ion-checkmark" id="scan-button" ng-controller="homeController" ng-click="checkProduct()">
+        </a>
+      </div>
+    </div>
+
+    <div class="spacer padding-bottom"></div>
+
+    <div class="row row-center" style="background:#DBC5C6;">
+      <div class="col col-center col-80">
+        <div class="row">
+        <label style="color:#ffffff">Locate Eatable</label>
+        </div>
+        <div class="row">
+          <label style="color:#ffffff; font-size: 10px;font-style:italic ">Find out where the product is found</label>
+        </div>
+      </div>
+      <div class="col">
+        <a class=" button button-scan button-default icon ion-search" id="locate-button" ui-sref="locate"></a>
+        </a>
+      </div>
+    </div>
+    <div class="spacer padding-bottom"></div>
+
+    <div class="row row-bottom" style="background:#A1D490">
+      <div class="col col-center col-80">
+        <div class="row">
+        <label style="color:#ffffff">Eatable Foods</label>
+        </div>
+        <div class="row">
+          <label style="color:#ffffff; font-size: 10px;font-style:italic ">Find all the stores that carry products safe for you</label>
+        </div>
+      </div>
+      <div class="col">
+        <a class=" button button-find button-default icon ion-android-cart" id="find-button" ui-sref="store"></a>
+      </div>
+    </div>
+</ion-content>
+</ion-view>
+
+<!-- Footer -->
+<div class="bar bar-footer bar-dark">
+  <div class="title">
+    <!-- <a class="button button-clear ng-controller="homeController" ng-click="checkProduct()">
+      Check Product</a> -->
+    <button class="button button-clear" ui-sref="setting" ui-sref-active="active">
+      <i class="icon ion-gear-a"></i>
+      Settings</button>
+  </div>
+</div>

@@ -1,0 +1,113 @@
+
+
+<ion-view>
+  <ion-nav-title>
+    <span style="color:#A1D490">Eat</span>Able
+  </ion-nav-title>
+  <ion-content>
+    <div class="error">
+    <label class="assertive padding">
+      {{error}}
+    </label>
+    </div>
+    <form name="signupForm" ng-submit="register(signupForm)"  novalidate="" >
+      <!-- Required field validations -->
+      <div class="error-container" ng-show="(signupForm.fname.$error.required || signupForm.lname.$error.required || signupForm.uname.$error.required  || signupForm.pwd.$error.required) && signupForm.$submitted"
+           ng-messages="signupForm.fname.$error">
+        <div class="error" ng-message="required">
+          <i class="ion-information-circled"></i>
+          All fields are required
+        </div>
+      </div>
+      <!-- Email address validation -->
+      <div class="error-container" ng-show="signupForm.uname.$invalid && signupForm.$submitted"
+           ng-messages="signupForm.uname.$error">
+        <div class="error" ng-message="invalid">
+          <i class="ion-information-circled"></i>
+          Username must be a valid email address
+        </div>
+      </div>
+
+      <div class="list list-inset">
+        <label class="item item-input" >
+          <input type="text" name="fname" placeholder="First Name" ng-model="input.firstname" required >
+        </label>
+        <label class="item item-input">
+          <input type="text" name="lname" placeholder="Last Name" ng-model="input.lastname" required ng-maxlength="24">
+        </label>
+        <label class="item item-input">
+          <input type="email" name="uname" placeholder="Userame(email)" ng-model="input.username" required >
+        </label>
+        <label class="item item-input">
+          <input type="text" name="pwd" placeholder="Password" ng-model="input.password" required>
+        </label>
+      </div>
+      <div>
+        <ul class="list list-inset">
+          <li class="text-center padding-bottom button-clear">
+            <label><span style="color:#A86D6D; font-weight: bold;">Select Allergens </span></label>
+          </li>
+          <li class="item item-toggle button-medium field-40">
+            <label>Peanut</label>
+            <label class="toggle toggle-balanced">
+              <input type="checkbox" ng-model="allergen.peanut">
+              <div class="track">
+                <div class="handle"></div>
+              </div>
+            </label>
+          </li>
+          <li class="item item-toggle button-medium field-40">
+            <label>Milk</label>
+            <label class="toggle toggle-balanced">
+              <input type="checkbox" ng-model="allergen.milk">
+              <div class="track">
+                <div class="handle"></div>
+              </div>
+            </label>
+          </li>
+          <li class="item item-toggle button-medium field-40">
+            <label>Egg</label>
+            <label class="toggle toggle-balanced">
+              <input type="checkbox" ng-model="allergen.egg">
+              <div class="track">
+                <div class="handle"></div>
+              </div>
+            </label>
+          </li>
+          <li class="item item-toggle button-medium field-40">
+            <label>Soy</label>
+            <label class="toggle toggle-balanced">
+              <input type="checkbox" ng-model="allergen.soy">
+              <div class="track">
+                <div class="handle"></div>
+              </div>
+            </label>
+          </li>
+          <li class="item item-toggle button-medium field-40">
+            <label class="">Shellfish</label>
+            <label class="toggle toggle-balanced">
+              <input type="checkbox" ng-model="allergen.shellfish">
+              <div class="track">
+                <div class="handle"></div>
+              </div>
+            </label>
+          </li>
+          <li class="item item-toggle button-medium field-40">
+            <label>Almond</label>
+            <label class="toggle toggle-balanced">
+              <input type="checkbox" ng-model="allergen.almond">
+              <div class="track">
+                <div class="handle"></div>
+              </div>
+            </label>
+          </li>
+
+        </ul>
+      </div>
+      <ion-input class="item-input padding">
+        <input type="submit" class="button button-stable button-login icon-right arrow-right-a" value="Sign up"/>
+      </ion-input>
+
+    </form>
+  </ion-content>
+</ion-view>

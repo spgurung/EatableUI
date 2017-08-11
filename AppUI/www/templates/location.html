@@ -1,0 +1,39 @@
+
+<ion-view>
+  <ion-nav-title>
+    <span style="color:#A1D490">Eat</span>Able
+  </ion-nav-title>
+  </ion-nav-buttons>
+  <ion-nav-bar class="bar-stable">
+    <ion-nav-back-button>
+    </ion-nav-back-button>
+  </ion-nav-bar>
+
+  <ion-content>
+    <div>
+      <label class="label-info3 padding">We found following <span style="color:#8f8f8f; font-weight:400">{{storeType}}</span> locations that carry products safe for you.</label>
+    </div>
+
+    <div ng-class="$even ? 'row bg-color3' : 'row bg-color4'" ng-repeat="location in store.storeLocation">
+      <div class="col col-80">
+
+          <div class="row">
+            {{location.storeAddress1}}
+          </div>
+          <div class="row">
+            {{location.storeAddress2}}
+          </div>
+
+      </div>
+      <div class="col">
+        <div class="row">
+          <!--<button class="button-rounded icon ion-fork icon-left" ui-sref="product({location: location.Id}, {storeType: store.storeName})">&nbsp;{{store.totalProduct}}</button> -->
+          <a class="button-rounded icon ion-fork icon-left" ui-sref="product({location: location.id, storeType: store.storeName})">&nbsp;{{location.productResult.length}}</a>
+        </div>
+      </div>
+
+      </div>
+    </div>
+
+  </ion-content>
+  </ion-view>

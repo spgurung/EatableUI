@@ -1,0 +1,181 @@
+
+.label-info1{
+  display: block;
+  color:#fff !important;
+  text-align: center !important;
+  font-size: 40px;
+}
+.label-info2{
+  display: block;
+  color:#fff !important;
+  text-align: center !important;
+  font-size: 14px;
+}
+
+.label-info3{
+  display: block;
+  color:#A86D6D !important;
+  text-align: center !important;
+  font-size: 16px;
+}
+
+.label-info4{
+  display: block;
+  color:#A86D6D !important;
+  text-align: center !important;
+  font-size: 14px;
+}
+.bg-color1{
+  background: #DBC5C6 !important;;
+}
+
+.bg-color2{
+  background: #A86D6D;
+}
+
+.bg-color4{
+  background: #A1D490;
+  color: #ffffff;
+}
+
+.bg-color3{
+  background: #90D4D1;
+  color: #ffffff;
+}
+
+.button-login{
+  background: #A1D490 !important;
+  color: #fff !important;
+}
+
+.button-register{
+  background:#A86D6D;
+  color: #A86D6D !important;
+}
+.button-default{
+  height: 60px !important;
+  width: 60px !important;
+  color:#fff !important;
+  text-align: center !important;
+  padding-top: 10px;
+}
+.button-scan{
+  background: #A86D6D !important;
+}
+.button-find{
+  background:#A86D6D !important;
+}
+
+.button-locate{
+  background:#A86D6D !important;
+}
+.button-allergies{
+  background:#DBC5C6 !important;
+}
+.button-home{
+  height: 100px;
+  font-size: 18px;
+  color:#fff !important;
+  text-align: center !important;
+  padding-top: 20px;
+}
+.popover {
+  height: auto !important;
+}
+.popover ion-header-bar {
+  position: relative;
+}
+.popover ion-content {
+  top: 0;
+  bottom:0;
+  position: relative;
+}
+
+.bar-stable{
+  color:#fff !important;
+}
+
+.title{
+  color: #8f8f8f !important;
+}
+
+.store-abbr{
+  display:inline;
+  float:left;
+}
+.field-35{
+  height:35px;
+}
+
+.field-45{
+  height:45px;
+}
+.has-errors {
+  border-bottom: 1px solid #B83E2C;
+}
+.no-errors {
+  border-bottom: 2px solid green;
+}
+label.item.has-error {
+  border-bottom: 2px solid red;
+}
+
+/** Styling for the password field when an error exists**/
+.error-container {
+  padding-left: 15px;
+}
+
+
+.error {
+  font-size: 10px;
+  color: #B83E2C;
+  vertical-align: middle;
+}
+
+.last-error-container > .error {
+  padding: 10px 16px 0;
+}
+
+.icon-big{
+  font-size : 24px;
+}
+
+.button-rounded {
+  display: block !important;
+  width: 50px !important;
+  height: 50px !important;
+  line-height: 50px !important;
+  border: 2px solid #b2b2b2 !important;
+  border-radius: 50% !important;
+  color: white !important;
+  text-align: center !important;
+  text-decoration: none !important;
+  font-size: 14px !important;
+  font-weight: bold !important;
+  background: #b2b2b2!important;
+}
+
+.button-rounded-miles {
+  display: block !important;
+  width: 50px !important;
+  height: 50px !important;
+  line-height: 50px !important;
+  border: 2px solid #b2b2b2 !important;
+  border-radius: 50% !important;
+  color: white !important;
+  text-align: center !important;
+  text-decoration: none !important;
+  font-size: 10px !important;
+  /*font-weight: bold !important;*/
+  background: #b2b2b2!important;
+}
+
+.scroll {
+  height: 100%;
+}
+
+#map {
+  height: 100%;
+  width: 100%;
+}
+

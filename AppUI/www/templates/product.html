@@ -1,0 +1,27 @@
+
+<ion-view>
+  <ion-nav-title>
+    <span style="color:#A1D490">Eat</span>Able
+  </ion-nav-title>
+  </ion-nav-buttons>
+  <ion-nav-bar class="bar-stable">
+    <ion-nav-back-button>
+    </ion-nav-back-button>
+  </ion-nav-bar>
+
+  <ion-content>
+    <div ng-class="$even ? 'row bg-color3' : 'row bg-color4'" ng-repeat="p in product">
+      <div class="col">
+        <div class="row-top">
+          <label>{{p.name}} </label>
+        </div>
+
+        <div class="row-bottom">
+          <label style="font-size: 10px;font-style:italic ">{{p.description}}</label>
+        </div>
+      </div>
+
+
+    </div>
+  </ion-content>
+  </ion-view>

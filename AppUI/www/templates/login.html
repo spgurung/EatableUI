@@ -1,0 +1,32 @@
+
+<!-- Login template -->
+
+
+<ion-view>
+  <ion-nav-title>
+    <span style="color:#A1D490">Eat</span>Able
+  </ion-nav-title>
+  <ion-content>
+    <div class="spacer" style="height: 50px;"></div>
+    <label class="assertive padding center">
+      {{error}}
+    </label>
+    <div class="list">
+      <label class="item item-input">
+        <input type="text" placeholder="Username" ng-model="credential.username">
+      </label>
+      <label class="item item-input">
+        <input type="text" placeholder="Password" ng-model="credential.password">
+      </label>
+      <div class="spacer" style="height: 20px;"></div>
+      <button class="button button-medium button-full button-login" ng-click="login()">
+        Login
+      </button>
+
+      <a class="button button-block button-clear button-register" ui-sref="register">
+       Or create an account
+      </a>
+    </div>
+
+  </ion-content>
+</ion-view>

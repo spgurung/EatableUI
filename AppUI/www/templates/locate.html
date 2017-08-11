@@ -1,0 +1,47 @@
+
+<ion-view>
+  <ion-nav-title>
+    <span style="color:#A1D490">Eat</span>Able
+  </ion-nav-title>
+  </ion-nav-buttons>
+  <ion-nav-bar>
+    <ion-nav-back-button>
+    </ion-nav-back-button>
+  </ion-nav-bar>
+  <ion-content>
+    <div class="row">
+      <div class="col col-90">
+        <form name="search" ng-submit="locate(searchText)">
+         <label class="item item-input button-small" >
+          <input type="text" name="fname" placeholder="Product Name" ng-model="searchText" required >
+          </label>
+        </form>
+      </div>
+     <div class="col">
+       <a class="button button-stable button-small icon ion-search padding-top" ng-click="locate(searchText)"></a>
+     </div>
+      </div>
+
+     <div>
+      <label ng-show="info != null" class="label-info3 padding-bottom">{{info}}</label>
+    </div>
+    <div ng-class="$even ? 'row bg-color3' : 'row bg-color4'" ng-repeat="location in productLocations">
+      <div class="col">
+        <div class="row-top">
+          <label style="font-size: 14px;">{{location.storeName}} - {{location.address1}}, {{location.address2}}</label>
+
+        </div>
+
+        <div class="row-bottom">
+          <label style="font-size: 12px;font-style:italic ">{{location.name}}</label>
+        </div>
+        <div class="row-bottom">
+          <label style="font-size: 12px;font-style:italic ">Brand: {{location.brandName}}</label>
+        </div>
+    </div>
+      <div class="col col-20">
+        <a class="button-rounded-miles" ui-sref="map({location: location.geoLocation})">&nbsp;{{location.distanceFromUserLocation}}</a>
+      </div>
+      </div>
+  </ion-content>
+  </ion-view>

@@ -1,0 +1,42 @@
+
+
+<ion-view>
+  <ion-nav-title>
+    <span style="color:#A1D490">Eat</span>Able
+  </ion-nav-title>
+  </ion-nav-buttons>
+  <ion-nav-bar class="bar-stable">
+    <ion-nav-back-button>
+    </ion-nav-back-button>
+  </ion-nav-bar>
+
+  <ion-content>
+    <div>
+      <div>
+        <label class="label-info3 padding">Following stores carry products that you can eat.</label>
+      </div>
+
+
+    <div ng-class="$even ? 'row bg-color3' : 'row bg-color4'" ng-repeat="result in storeResult">
+      <div class="col col-80">
+
+        <div class="row">
+          {{result.storeName}}
+        </div>
+        <div class="row">
+          {{result.totalLocation}} Locations {{result.totalProduct}} Unique Products
+        </div>
+      </div>
+      <div class="col">
+        <div class="row">
+        <i class="icon icon-big icon-right ion-chevron-right padding" ui-sref="location({storeType: result.storeName})"></i>
+          </div>
+
+      </div>
+  </div>
+      </div>
+  </ion-content>
+</ion-view>
+
+
+
